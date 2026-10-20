@@ -3,6 +3,7 @@ from aegis.core.execution import ExecutionEngine
 from aegis.ledger.recorder import InMemoryRecorder
 from aegis.tools.mock_tools import MockTools
 
+
 def test_basic_workflow_end_to_end():
     recorder = InMemoryRecorder()
     engine = ExecutionEngine(MockTools(), ContractEngine(), recorder)

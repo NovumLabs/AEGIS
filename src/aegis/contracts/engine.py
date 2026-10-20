@@ -1,4 +1,6 @@
 """Initial explicit-deny contract engine."""
+
+
 class ContractEngine:
     def __init__(self, denied_tools: set[str] | None = None) -> None:
         self.denied_tools = denied_tools or set()

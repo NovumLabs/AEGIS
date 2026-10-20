@@ -1,5 +1,7 @@
 """Configuration defaults for AEGIS v0.1.0."""
+
 from dataclasses import dataclass
+
 
 @dataclass(frozen=True)
 class AegisConfig:

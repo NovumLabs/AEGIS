@@ -1,6 +1,9 @@
 """Safe mock tools; no external side effects are performed."""
+
 from typing import Any
+
 from aegis.exceptions import ToolExecutionError
+
 
 class MockTools:
     def __init__(self, fail_tools: set[str] | None = None) -> None:

@@ -1,5 +1,7 @@
 """In-memory event recorder for the initial prototype."""
+
 from typing import Any
+
 
 class InMemoryRecorder:
     def __init__(self) -> None:
