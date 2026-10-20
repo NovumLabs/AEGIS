@@ -1,34 +1,21 @@
 [build-system]
-requires = ["setuptools>=69", "wheel"]
+requires = ["setuptools>=61.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "aegis"
 version = "0.1.0"
-description = "Runtime assurance foundations for reliable AI-agent workflows."
+description = "Runtime assurance foundations for AI-agent workflows"
 readme = "README.md"
-requires-python = ">=3.11"
-license = { file = "LICENSE" }
-authors = [{ name = "Novum Labs" }]
-dependencies = []
+requires-python = ">=3.10"
+dependencies = [
+    "pytest>=8.0.0",
+    "ruff>=0.2.0",
+]
 
-[project.optional-dependencies]
-dev = ["pytest>=8.0", "ruff>=0.11"]
-
-[project.scripts]
-aegis = "aegis.cli.main:main"
+[tool.setuptools]
+package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
 where = ["src"]
-
-[tool.pytest.ini_options]
-testpaths = ["tests"]
-pythonpath = ["src"]
-addopts = "-ra"
-
-[tool.ruff]
-line-length = 88
-target-version = "py311"
-
-[tool.ruff.lint]
-select = ["E", "F", "I"]
+include = ["aegis*"]
