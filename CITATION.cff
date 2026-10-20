@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+message: "If you use AEGIS, please cite the repository version you used."
+title: "AEGIS: Runtime Assurance and Autonomous Recovery for AI-Agent Systems"
+type: software
+version: 0.1.0
+authors:
+  - name: "Novum Labs"

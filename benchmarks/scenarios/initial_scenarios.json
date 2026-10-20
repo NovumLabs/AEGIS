@@ -1,0 +1,11 @@
+{
+  "schema_version": "0.1.0",
+  "note": "Starter scenario catalogue; these are definitions, not benchmark results.",
+  "scenarios": [
+    {"id": "normal_echo", "kind": "normal", "tool": "echo", "arguments": {"message": "hello"}, "expected_status": "completed"},
+    {"id": "normal_add", "kind": "normal", "tool": "add", "arguments": {"a": 2, "b": 3}, "expected_status": "completed"},
+    {"id": "unknown_tool", "kind": "tool_error", "tool": "missing_tool", "arguments": {}, "expected_status": "failed"},
+    {"id": "explicit_deny", "kind": "policy", "tool": "delete_all", "arguments": {}, "expected_status": "blocked"},
+    {"id": "simulated_timeout", "kind": "tool_error", "tool": "slow", "arguments": {}, "expected_status": "failed"}
+  ]
+}
